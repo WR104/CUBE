@@ -173,9 +173,11 @@
             const pointerDown = (mesh) => {
                 let index = Number(mesh.name);
                 // alert(index);
+                let positionAir = blockPosition[blockAir];
                 if (move(index)) {
                     physicalMove(index);
-
+                    solution.push(cube[positionAir[0]][positionAir[1]][positionAir[2]]);
+                    
                     let num = 0;
                     for (let x = 0; x < 3; x++) {
                         for (let y = 0; y < 3; y++) {
