@@ -298,6 +298,8 @@
 
         // Resize
         window.addEventListener("resize", function () {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
             engine.resize();
         });
     </script>
