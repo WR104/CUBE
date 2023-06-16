@@ -1,4 +1,4 @@
-var canvas = document.getElementById("renderCanvas");
+var canvas = document.getElementById("renderCanvas"); 
 
 var engine = null;
 var scene = null;
