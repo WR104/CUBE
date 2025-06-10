@@ -195,26 +195,25 @@ const createScene = () => {
     //UI
     const isMobile = window.matchMedia("(max-width: 600px)").matches;
     
-    // Set idealWidth to help with scaling
     const advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI", true, scene);
     advancedTexture.idealWidth = isMobile ? 540 : 960;
     
-    // Create the button
     const button = BABYLON.GUI.Button.CreateSimpleButton("but", "Solve");
     
-    // Adjust button styling for responsiveness
-    button.width = isMobile ? "45%" : "160px";
-    button.height = isMobile ? "60px" : "48px";
-    button.fontSize = isMobile ? "24px" : "20px";
+    // Bigger size for better visibility and easier touch interaction
+    button.width = isMobile ? "70%" : "240px";
+    button.height = isMobile ? "80px" : "60px";
+    button.fontSize = isMobile ? "28px" : "22px";
+    button.cornerRadius = isMobile ? 40 : 30;
     button.top = "40%";
     
+    // Style
     button.color = "white";
     button.background = "black";
-    button.cornerRadius = isMobile ? 30 : 20;
     button.thickness = 2;
     
-    // Add button to the UI
     advancedTexture.addControl(button);
+
 
 
 
