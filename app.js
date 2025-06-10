@@ -201,7 +201,7 @@ const createScene = () => {
     const button = BABYLON.GUI.Button.CreateSimpleButton("but", "Solve");
     
     // Bigger size for better visibility and easier touch interaction
-    button.width = isMobile ? "70%" : "240px";
+    button.width = isMobile ? "40%" : "240px";
     button.height = isMobile ? "80px" : "60px";
     button.fontSize = isMobile ? "28px" : "22px";
     button.cornerRadius = isMobile ? 40 : 30;
